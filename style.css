@@ -136,45 +136,5 @@ body {
   to { transform: rotate(360deg); }
 }
 
-/* Landing page */
-#landing {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: linear-gradient(180deg, #ffcccc, #ff99cc);
-  flex-direction: column;
-  text-align: center;
-}
-
-.envelope {
-  width: 250px;
-  height: 200px;
-  background: #fff;
-  border: 3px solid #ff6666;
-  border-radius: 10px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.heart {
-  font-size: 4rem;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.heart:hover {
-  transform: scale(1.2);
-}
-
-/* Hidden class */
-.hidden {
-  display: none;
-}
-
-
 
 
