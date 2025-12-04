@@ -4,26 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday!</title>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <div class="container">
-    <h1 id="title">🎉 Happy Birthday! 🎉</h1>
-    <p id="message">Wishing you an amazing day filled with fun, joy, and surprises!</p>
+  <!-- Snow container -->
+  <div id="snow"></div>
 
-    <button id="surpriseBtn">Click for a Surprise 🎁</button>
+  <div class="container">
+    <h1 id="title">🎉 生日快乐! 🎉</h1>
+    <p id="message">祝你有一个充满乐趣、喜悦和惊喜的美好一天！</p>
+
+    <button id="surpriseBtn">点击惊喜 🎁</button>
 
     <div id="surpriseBox" class="hidden">
-      <p class="surprise-text">🎈 You're awesome! 🎈</p>
+      <p class="surprise-text">🎈 你真棒！🎈</p>
     </div>
   </div>
+  
+  <!-- Music button (top-right corner) -->
+  <button id="musicBtn" title="Play music">
+   <img src="assets/record.svg" alt="Record" id="musicIcon">
+  </button>
 
-  <!-- JS -->
+  <!-- Background music -->
+  <audio id="bgMusic" loop autoplay>
+    <source src="assets/music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
   <script src="script.js"></script>
-
 </body>
 </html>
