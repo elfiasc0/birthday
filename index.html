@@ -1,38 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday!</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Birthday Surprise</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-  <!-- Snow container -->
-  <div id="snow"></div>
+<body class="page1">
 
-  <div class="container">
-    <h1 id="title">🎉 生日快乐! 🎉</h1>
-    <p id="message">祝你有一个充满乐趣、喜悦和惊喜的美好一天！</p>
-
-    <button id="surpriseBtn">点击惊喜 🎁</button>
-
-    <div id="surpriseBox" class="hidden">
-      <p class="surprise-text">🎈 你真棒！🎈</p>
+    <div class="center-content">
+        <div class="click-icon" onclick="goToPage2()">
+            ❄️ 叮咚：您有一份来自波兰的祝福，请查收
+        </div>
     </div>
-  </div>
-  
-  <!-- Music button (top-right corner) -->
-  <button id="musicBtn" title="Play music">
-   <img src="assets/record.svg" alt="Record" id="musicIcon">
-  </button>
 
-  <!-- Background music -->
-  <audio id="bgMusic" loop autoplay>
-    <source src="assets/music.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
 
-  <script src="script.js"></script>
+    <!-- Music button (top-right corner) -->
+    <button id="musicBtn" title="Play music">
+        <img src="assets/bell.png" alt="Bell" id="musicIcon" class="bell">
+    </button>
+
+    <!-- Background music -->
+    <audio id="bgMusic" loop autoplay>
+        <source src="assets/doorBell.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

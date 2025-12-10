@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Your Wish</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page3">
+
+    <!-- Typed text container -->
+    <div class="typed-text" id="typedText"></div>
+
+    <script src="script.js"></script>
+
+    <script>
+        const textToType = `
+2005年12月11日，哈勃望远镜拍摄到了宇宙中最闪亮的旋涡星系之一：M81波德星系。
+愿同一天出生的你，拥有像M81一样广阔无垠、璀璨明亮的人生。
+
+刚刚听说你不过阳历生日了，所以我在疯狂改文案哈哈哈哈。
+阴历也不知道是哪天，而且这天好像也不是你真正出生的日子（？）
+不过没关系啦，反正祝福都是满满的～
+新的一岁，祝你心情好一点，emo少一点，钱包鼓一点，运气好一点～
+
+季乾语，20岁生日快乐！
+        `;
+
+        typeText(textToType);
+    </script>
+
+    <!-- Music button -->
+    <button id="musicBtn" title="Play music">
+        <img src="assets/record.svg" alt="Record" id="musicIcon">
+    </button>
+
+    <!-- Background music -->
+    <audio id="bgMusic" loop autoplay>
+        <source src="assets/Tennessee.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- THREE.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.98.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.98.0/examples/js/controls/OrbitControls.js"></script>
+
+</head>
+
+<body class="page2">
+
+    <!-- Snow -->
+    <div id="snow"></div>
+
+    <!-- UI -->
+    <div class="container">
+        <h1 id="title">🎉 季宇，20岁生日快乐! 🎉</h1>
+        <p id="message">对着赛博蛋糕许个愿吧啊哈哈哈（这部分做得比较潦草嘿嘿）</p>
+
+        <button id="surpriseBtn">🎁传送门</button>
+    </div>
+
+    <!-- Music -->
+    <button id="musicBtn" title="Play music">
+        <img src="assets/record.svg" alt="Record" id="musicIcon">
+    </button>
+
+    <audio id="bgMusic" loop autoplay>
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- UI interactions -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
