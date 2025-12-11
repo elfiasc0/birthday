@@ -23,22 +23,14 @@ function typeText(text) {
 }
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
 
     const btn = document.getElementById("surpriseBtn");
-    const box = document.getElementById("surpriseBox");
+    const dimOverlay = document.getElementById("dimOverlay");
     const musicBtn = document.getElementById("musicBtn");
     const bgMusic = document.getElementById("bgMusic");
 
-    if (btn) {
-        btn.addEventListener("click", () => {
-            window.location.href = "page3.html";
-        });
-    }
-
-
-    // Music autoplay + rotation for ALL PAGES
+    // Music autoplay
     bgMusic.play().then(() => {
         musicBtn.classList.add("playing");
     }).catch(() => {
@@ -48,24 +40,34 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Snow only on page 2
+    // Snow...
     const snowContainer = document.getElementById("snow");
     if (snowContainer) {
         function createSnowflake() {
-            const snowflake = document.createElement("div");
-            snowflake.classList.add("snowflake");
-            snowflake.textContent = "❄";
-            snowflake.style.left = Math.random() * window.innerWidth + "px";
-            snowflake.style.fontSize = (Math.random() * 24 + 12) + "px";
-            snowflake.style.animationDuration = (Math.random() * 5 + 5) + "s";
-            snowflake.style.opacity = Math.random();
-            snowContainer.appendChild(snowflake);
-
-            setTimeout(() => { snowflake.remove(); }, 10000);
+            const s = document.createElement("div");
+            s.classList.add("snowflake");
+            s.textContent = "❄";
+            s.style.left = Math.random() * window.innerWidth + "px";
+            s.style.fontSize = (Math.random() * 24 + 12) + "px";
+            s.style.animationDuration = (Math.random() * 5 + 5) + "s";
+            s.style.opacity = Math.random();
+            snowContainer.appendChild(s);
+            setTimeout(() => s.remove(), 10000);
         }
-        setInterval(createSnowflake, 200);
+        setInterval(createSnowflake, 100);
+    }
+
+    // 🎁 Working dimming transition
+    if (btn) {
+        btn.addEventListener("click", () => {
+            dimOverlay.classList.add("active");
+            setTimeout(() => {
+                window.location.href = "page3.html";
+            }, 1200);
+        });
     }
 
 });
+
 
 
