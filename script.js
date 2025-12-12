@@ -12,7 +12,7 @@ function typeText(text) {
             i++;
             setTimeout(type, 120);
         } else {
-            // ✅ typing finished → wait 5 seconds → hide
+            // ✅ typing finished → wait 3 seconds → hide
             setTimeout(() => {
                 container.style.opacity = "0";
             }, 3000);
